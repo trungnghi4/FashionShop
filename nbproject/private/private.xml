@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/GitHub/FashionShop/web/WEB-INF/view/client/view/cart.jsp</file>
+            <file>file:/D:/GitHub/FashionShop/src/java/util/Constant.java</file>
+            <file>file:/D:/GitHub/FashionShop/src/java/controller/admin/welcome.java</file>
+            <file>file:/D:/GitHub/FashionShop/web/WEB-INF/dispatcher-servlet.xml</file>
+            <file>file:/D:/GitHub/FashionShop/src/java/controller/admin/AddProductController.java</file>
+            <file>file:/D:/GitHub/FashionShop/src/java/hibernate.cfg.xml</file>
+            <file>file:/D:/GitHub/FashionShop/web/WEB-INF/view/client/view/topbar.jsp</file>
+            <file>file:/D:/GitHub/FashionShop/src/java/A/WellcomeController.java</file>
+            <file>file:/D:/GitHub/FashionShop/src/java/controller/admin/AddUserController.java</file>
+            <file>file:/D:/GitHub/FashionShop/web/WEB-INF/view/client/view/footer.jsp</file>
+            <file>file:/D:/GitHub/FashionShop/src/java/controller/admin/DeleteUserController.java</file>
+            <file>file:/D:/GitHub/FashionShop/web/WEB-INF/view/client/view/register.jsp</file>
+            <file>file:/D:/GitHub/FashionShop/src/java/A/CartAddController.java</file>
+            <file>file:/D:/GitHub/FashionShop/src/java/controller/admin/ListUserController.java</file>
+            <file>file:/D:/GitHub/FashionShop/web/WEB-INF/view/client/view/product-detail.jsp</file>
+            <file>file:/D:/GitHub/FashionShop/web/WEB-INF/view/client/view/add-to-cart.jsp</file>
+            <file>file:/D:/GitHub/FashionShop/src/java/A/LogoutController.java</file>
+            <file>file:/D:/GitHub/FashionShop/nbproject/build-impl.xml</file>
+            <file>file:/D:/GitHub/FashionShop/web/WEB-INF/web.xml</file>
+            <file>file:/D:/GitHub/FashionShop/src/java/A/CartController.java</file>
+            <file>file:/D:/GitHub/FashionShop/web/WEB-INF/view/client/view/product-list.jsp</file>
+            <file>file:/D:/GitHub/FashionShop/web/WEB-INF/view/client/view/product-gird.jsp</file>
+            <file>file:/D:/GitHub/FashionShop/web/redirect.jsp</file>
+            <file>file:/D:/GitHub/FashionShop/src/java/controller/HomepageController.java</file>
+            <file>file:/D:/GitHub/FashionShop/web/WEB-INF/view/client/view/navbar.jsp</file>
+            <file>file:/D:/GitHub/FashionShop/web/WEB-INF/view/client/view/index1.jsp</file>
+            <file>file:/D:/GitHub/FashionShop/web/WEB-INF/view/client/view/index.jsp</file>
+            <file>file:/D:/GitHub/FashionShop/web/WEB-INF/applicationContext.xml</file>
+            <file>file:/D:/GitHub/FashionShop/src/java/A/LoginController.java</file>
+            <file>file:/D:/GitHub/FashionShop/web/WEB-INF/view/client/view/login.jsp</file>
+            <file>file:/D:/GitHub/FashionShop/src/java/A/RegisterController.java</file>
+        </group>
+    </open-files>
+</project-private>
