@@ -25,7 +25,7 @@ public class WellcomeController {
 //        @RequestMapping(value="index1",method =RequestMethod.GET)
         @RequestMapping(value = "/index")
         public String index(){
-            return "view/client/view/login";
+            return "view/client/login";
         }
 
 }

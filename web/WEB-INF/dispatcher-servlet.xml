@@ -71,5 +71,10 @@
         <property name="prefix" value="/WEB-INF/" />
         <property name="suffix" value=".jsp" />
     </bean>
+    <mvc:annotation-driven />
+    <mvc:resources mapping="/resources/**" location="/resources/client/"
+    cache-period="31556926" />
+<!--     <mvc:resources mapping="/resources/**" location="/resources/" />-->
+<!--    <mvc:resources mapping="/resources/**" location="/resources/"/>-->
  
 </beans>
