@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<c:url value="/view/client/static" var="url"></c:url>
+<c:url value="/view/client" var="url"></c:url>
 <c:url value="/resources" var="url1"></c:url>
 <meta charset="UTF-8">
 <title>Login</title>
@@ -49,7 +49,6 @@
     <div class="header-v5 header-${url}">
         <!-- Topbar v3 -->
         <jsp:include page="topbar.jsp"></jsp:include>
-        
         <!-- End Topbar v3 -->
 
         <!-- Navbar -->
@@ -77,7 +76,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7 md-margin-bottom-50">
-                    <h2 class="welcome-title">Welcome to Unify</h2>
+                    <h2 class="welcome-title">Welcome to ShopK</h2>
                     <p>Suspendisse et tincidunt ipsum, et dignissim urna. Vestibulum nisl tortor, gravida at magna et, suscipit vehicula massa.</p><br>
                     <div class="info-block-v2">
                         <i class="icon icon-layers"></i>

@@ -1,7 +1,9 @@
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-      <c:url value="resources" var="url"></c:url>
+<%--<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>--%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>  
+      <c:url value="/resources" var="url"></c:url>
  <div class="navbar navbar-default mega-menu" role="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -20,7 +22,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-responsive-collapse">
                     <!-- Shopping Cart -->
-                   <jsp:include page="/WEB-INF/view/client/view/cart.jsp"></jsp:include>
+                   <jsp:include page="/WEB-INF/view/client/cart.jsp"></jsp:include>
                     <!-- End Shopping Cart -->
 
                     <!-- Nav Menu -->
@@ -28,8 +30,8 @@
                         <!-- Pages -->
                         <li class="dropdown active">
                             <a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
-                                Pages
-                            </a>
+                                Pages 
+                           </a>
                             <ul class="dropdown-menu">
                                 <li><a href="index.html">Shop UI</a></li>
                                 <li><a href="shop-ui-inner.html">Product Page</a></li>
@@ -45,7 +47,7 @@
                         <!-- Promotion -->
                         <li class="dropdown">
                             <a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
-                                Promotion
+                                Khuyến mãi
                             </a>
                             <ul class="dropdown-menu">
                                 <li class="dropdown-submenu">
@@ -70,7 +72,8 @@
                         <!-- Gifts -->
                         <li class="dropdown mega-menu-fullwidth">
                             <a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown">
-                                Gifts
+<!--                                Gifts-->
+                                    Quà tặng
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
@@ -245,7 +248,7 @@
                         <!-- Clothes -->
                         <li class="dropdown">
                             <a href="javascript:void(0);" class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" data-delay="1000">
-                                Clothes
+                                Quần áo
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Jeans</a></li>
@@ -256,7 +259,7 @@
                         <!-- End Clothes -->
 
                         <!-- Main Demo -->
-                        <li><a href="../index.html">Main Demo</a></li>
+<!--                        <li><a href="../index.html">Main Demo</a></li>-->
                         <!-- Main Demo -->
                     </ul>
                     <!-- End Nav Menu -->                    

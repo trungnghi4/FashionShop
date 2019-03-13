@@ -9,7 +9,7 @@
                     <!-- About -->
                     <div class="col-md-4 md-margin-bottom-40">
                         <a href="index.html"><img class="footer-logo" src="static/img/logo-2.png" alt=""></a>
-                        <p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>
+                        <p>About ShopK dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>
                         <br>
                         <ul class="list-unstyled address-list margin-bottom-20">
                             <li><i class="fa fa-angle-right"></i>Ha Noi - Viet Nam</li>
@@ -136,7 +136,7 @@
                 <div class="row">
                     <div class="col-md-6">                     
                         <p>
-                            2014 &copy; Unify. ALL Rights Reserved. 
+                            2014 &copy; ShopK. ALL Rights Reserved. 
                             <a target="_blank" href="https://twitter.com/htmlstream">Htmlstream</a> | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
                         </p>
                     </div>

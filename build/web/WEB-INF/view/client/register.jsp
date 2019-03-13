@@ -92,7 +92,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7 md-margin-bottom-50">
-						<h2 class="welcome-title">Welcome to Unify</h2>
+						<h2 class="welcome-title">Welcome to ShopK</h2>
 						<p>Suspendisse et tincidunt ipsum, et dignissim urna.
 							Vestibulum nisl tortor, gravida at magna et, suscipit vehicula
 							massa.</p>
