@@ -60,12 +60,12 @@
     <!--=== Breadcrumbs v4 ===-->
     <div class="breadcrumbs-v4">
         <div class="container">
-            <span class="page-name">Log In</span>
+            <span class="page-name">Đăng Nhập</span>
             <h1>Maecenas <span class="shop-green">enim</span> sapien</h1>
             <ul class="breadcrumb-v4-in">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="">Product</a></li>
-                <li class="active">Log In</li>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="">Sản Phẩm</a></li>
+                <li class="active">Đăng Nhập</li>
             </ul>
         </div><!--/end container-->
     </div> 
@@ -76,7 +76,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7 md-margin-bottom-50">
-                    <h2 class="welcome-title">Welcome to ShopK</h2>
+                    <h2 class="welcome-title">Chào mừng bạn tới shopK</h2>
                     <p>Suspendisse et tincidunt ipsum, et dignissim urna. Vestibulum nisl tortor, gravida at magna et, suscipit vehicula massa.</p><br>
                     <div class="info-block-v2">
                         <i class="icon icon-layers"></i>
@@ -103,7 +103,7 @@
 
                 <div class="col-md-5">
                     <form id="sky-form1" class="log-reg-block sky-form" action="login" method="post">
-                        <h2>Log in to your account</h2>
+                        <h2>Đăng nhập bằng tài khoản của bạn</h2>
 
                         <section>
                             <label class="input login-input">
@@ -126,14 +126,14 @@
                                 <label class="checkbox">
                                     <input type="checkbox" name="checkbox"/>
                                     <i></i>
-                                    Remember me
+                                    Ghi nhớ mật khẩu?
                                 </label>
                             </div>
                             <div class="col-xs-6 text-right">
-                                <a href="#">Forget your Password?</a>
+                                <a href="#">Quên mật khẩu?</a>
                             </div>
                         </div>
-                        <button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit">Log in</button>
+                        <button class="btn-u btn-u-sea-shop btn-block margin-bottom-20" type="submit">Đăng Nhập</button>
 
                         <div class="border-wings">
                             <span>or</span>
@@ -141,16 +141,16 @@
                             
                         <div class="row columns-space-removes">
                             <div class="col-lg-6 margin-bottom-10">
-                                <button type="button" class="btn-u btn-u-md btn-u-fb btn-block"><i class="fa fa-facebook"></i> Facebook Log In</button>
+                                <button type="button" class="btn-u btn-u-md btn-u-fb btn-block"><i class="fa fa-facebook"></i> Đăng Nhập Facebook</button>
                             </div>
                             <div class="col-lg-6">
-                                <button type="button" class="btn-u btn-u-md btn-u-tw btn-block"><i class="fa fa-twitter"></i> Twitter Log In</button>
+                                <button type="button" class="btn-u btn-u-md btn-u-tw btn-block"><i class="fa fa-twitter"></i> Đăng nhập Twitter</button>
                             </div>
                         </div>
                     </form>
                     
                     <div class="margin-bottom-20"></div>
-                    <p class="text-center">Don't have account yet? Learn more and <a href="shop-ui-register.html">Sign Up</a></p>
+                    <p class="text-center">Ban có tài khoản chưa? Tìm hiểu thêm và <a href="shop-ui-register.html">Đăng Kí</a></p>
                 </div>
             </div><!--/end row-->
         </div><!--/end container-->
@@ -162,7 +162,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 md-margin-bottom-20">
-                    <h2>subscribe to our weekly <strong>newsletter</strong></h2>
+                    <h2>Nhận thông báo hằng tuần <strong>tin tức</strong></h2>
                 </div>  
                 <div class="col-md-4">
                     <div class="input-group">
