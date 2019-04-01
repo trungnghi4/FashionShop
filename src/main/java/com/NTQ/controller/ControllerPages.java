@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping(value = "")
 public class ControllerPages {
-
-    @RequestMapping(value = "home.html", method = RequestMethod.GET)
+    @RequestMapping(value = "home", method = RequestMethod.GET)
     public String viewHome(ModelMap mm) {
 
         return "index";
