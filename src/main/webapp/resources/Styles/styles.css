@@ -119,3 +119,42 @@ html,body{
 	padding-left: 42px;
 }
 /* End css login*/
+
+/* Start css home*/
+#header{ 
+	
+	height: 600px;
+	background: linear-gradient(
+		rgba(0,0,0,0.42),
+		rgba(0,0,0,0.42)
+	),url("../images/login_left.jpg") no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	
+}
+.none_nav{
+	background: none !important;
+	border: none !important;
+}
+.navbar_center{
+	margin-left: 25% !important;
+}
+.navbar_nav a{
+	color: white !important;
+}
+.active > a{
+	color:#0167ff !important;
+	background: none !important;
+	font-weight: bold;
+}
+.open a{
+	color:#0167ff !important;
+	background: none !important;
+	font-weight: bold;
+}
+.dropdown-menu{
+	background-color:#0167ff !important;
+}
+/* End css home*/

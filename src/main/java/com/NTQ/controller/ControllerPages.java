@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping(value = "")
 public class ControllerPages {
-    @RequestMapping(value = "home", method = RequestMethod.GET)
+    @RequestMapping(value = "login", method = RequestMethod.GET)
     public String viewHome(ModelMap mm) {
 
         return "index";
     }
 
-    @RequestMapping(value = "about.html", method = RequestMethod.GET)
+    @RequestMapping(value = "home", method = RequestMethod.GET)
     public String viewAbout(ModelMap mm) {
 
-        return "about";
+        return "home";
     }
 
     @RequestMapping(value = "shop.html", method = RequestMethod.GET)
