@@ -24,7 +24,7 @@
 			</div>
 			<div class="wrap-input">
 				<span class="label-input">Password</span>
-				<input class="input" type="text"/>
+				<input class="input" type="password"/>
 			</div>
 			<div class="forgot-password-text text-right p-t-8 p-b-31">
 				<a>Forgot password?</a>
