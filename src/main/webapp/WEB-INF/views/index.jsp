@@ -8,6 +8,8 @@
 <link rel="stylesheet" href='<c:url value="/resources/Styles/styles.css"/>'/>
 <link rel="stylesheet" href='<c:url value="/resources/Styles/util.css"/>'/>
 <link href="<c:url value="/resources/bootstrap-4.0.0-dist/css/bootstrap.min.css" />" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/resources/fonts/iconic/css/material-design-iconic-font.min.css">
  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 <title>ShopK</title>
 </head>
