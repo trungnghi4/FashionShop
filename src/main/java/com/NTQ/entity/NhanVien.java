@@ -15,8 +15,9 @@ public class NhanVien {
 	int manhanvien;
 	String hoten;
 	String diachi;
-	String cmnd;
 	
+	String cmnd;
+	String gioitinh;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="machucvu")
 	ChucVu chucvu;
@@ -24,6 +25,18 @@ public class NhanVien {
 	String email;
 	String matkhau;
 	
+	public String getGioitinh() {
+		return gioitinh;
+	}
+	public void setGioitinh(String gioitinh) {
+		this.gioitinh = gioitinh;
+	}
+	public ChucVu getChucvu() {
+		return chucvu;
+	}
+	public void setChucvu(ChucVu chucvu) {
+		this.chucvu = chucvu;
+	}
 	public int getManhanvien() {
 		return manhanvien;
 	}

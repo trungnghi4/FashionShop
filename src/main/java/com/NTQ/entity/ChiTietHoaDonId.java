@@ -1,9 +1,11 @@
 package com.NTQ.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class ChiTietHoaDonId {
+public class ChiTietHoaDonId implements Serializable{
 	int mahoadon;
 	int machitietsanpham;
 	public int getMahoadon() {
