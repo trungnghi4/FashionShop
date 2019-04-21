@@ -10,18 +10,18 @@ public class ChucVu {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	int machucvu;
-	String tenchucvuString;
+	String tenchucvu;
 	public int getMachucvu() {
 		return machucvu;
 	}
 	public void setMachucvu(int machucvu) {
 		this.machucvu = machucvu;
 	}
-	public String getTenchucvuString() {
-		return tenchucvuString;
+	public String getTenchucvu() {
+		return tenchucvu;
 	}
-	public void setTenchucvuString(String tenchucvuString) {
-		this.tenchucvuString = tenchucvuString;
+	public void setTenchucvuString(String tenchucvu) {
+		this.tenchucvu = tenchucvu;
 	}
 	
 	

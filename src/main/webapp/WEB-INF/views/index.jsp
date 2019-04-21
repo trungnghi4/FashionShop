@@ -10,7 +10,9 @@
 <link href="<c:url value="/resources/bootstrap-4.0.0-dist/css/bootstrap.min.css" />" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/resources/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="/resources/fonts/iconic/css/material-design-iconic-font.min.css">
- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src='<c:url value ="/resources/JS/custom.js"/>'></script>
 <title>ShopK</title>
 </head>
 <body class="body-login">
@@ -21,11 +23,11 @@
 				<span class="login-form-title p-b-49">Login</span>
 				<div class="wrap-input m-b-23">
 					<span class="label-input">Email</span>
-					<input class="input" type="text"/>
+					<input id ="email" name="email" class="input" type="text"/>
 				</div>
 				<div class="wrap-input">
 					<span class="label-input">Password</span>
-					<input class="input" type="password"/>
+					<input id ="matkhau" name="matkhau"class="input" type="password"/>
 				</div>
 				<div class="forgot-password-text text-right p-t-8 p-b-31">
 					<a>Forgot password?</a>
@@ -33,7 +35,10 @@
 			</form>
 			<div class="container-login-form-btn">
 				<div class="wrap-login-form-btn">
-					<button class="login-form-btn"><span>LOGIN </span></button>
+					<button class="login-form-btn">
+					<span id="btnDangNhap">LOGIN </span>
+					</button>
+					<span id="result"></span>
 				</div>
 			</div>
 			<div class="sign-up-text text-center p-t-54 p-b-20">

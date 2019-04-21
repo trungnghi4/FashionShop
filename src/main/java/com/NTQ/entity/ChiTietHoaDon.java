@@ -1,11 +1,11 @@
 package com.NTQ.entity;
 
-import javax.persistence.Embedded;
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 
 @Entity(name="CHITIETHOADON")
 public class ChiTietHoaDon {
-	@Embedded
+	@EmbeddedId
 	ChiTietHoaDonId chiTietHoaDonId;
 	int soluong;
 	String giatien;

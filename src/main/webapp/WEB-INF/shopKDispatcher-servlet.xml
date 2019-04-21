@@ -22,7 +22,7 @@
         <property name="suffix" value  =".jsp" />
     </bean>
     
-    <import resource="classpath:IoC.xml"/>	
+    <import resource="classpath:IoC.xml"/>	 
     
     
 <!--     <mvc:resources mapping="/resources/**" location="/resources/" />-->
