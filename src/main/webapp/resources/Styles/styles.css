@@ -203,6 +203,9 @@ html,body{
 	height: 50px;
 	cursor: pointer;
 }
+.container-signup-form{
+	display:none;
+}
 /* End css login*/
 
 /* Start css home*/

@@ -19,28 +19,59 @@
 	<div class="container-login">
 		<img class="login-image" src='<c:url value="/resources/images/login_left.jpg"/>'/>
 		<div class="login-form p-l-55 p-r-55 p-t-65 p-b-54">
-			<form action="" method="post">
-				<span class="login-form-title p-b-49">Login</span>
-				<div class="wrap-input m-b-23">
-					<span class="label-input">Email</span>
-					<input id ="email" name="email" class="input" type="text"/>
-				</div>
-				<div class="wrap-input">
-					<span class="label-input">Password</span>
-					<input id ="matkhau" name="matkhau"class="input" type="password"/>
-				</div>
-				<div class="forgot-password-text text-right p-t-8 p-b-31">
-					<a>Forgot password?</a>
-				</div>
-			</form>
-			<div class="container-login-form-btn">
-				<div class="wrap-login-form-btn">
-					<button class="login-form-btn">
-					<span id="btnDangNhap">LOGIN </span>
-					</button>
-					<span id="result"></span>
+		<span id ="dangnhap" class="login-form-title p-b-49">Login</span>/<span id="dangky" class="login-form-title p-b-49" >SignUp</span>
+		<div>	
+			<div id = "container-login-form">
+				<form action="" method="post">
+					<div class="wrap-input m-b-23">
+						<span class="label-input">Email</span>
+						<input id ="email" name="email" class="input" type="text"/>
+					</div>
+					<div class="wrap-input">
+						<span class="label-input">Password</span>
+						<input id ="matkhau" name="matkhau"class="input" type="password"/>
+					</div>
+					<div class="forgot-password-text text-right p-t-8 p-b-31">
+						<a>Forgot password?</a>
+					</div>
+				</form>
+				<div class="container-login-form-btn">
+					<div class="wrap-login-form-btn">
+						<button class="login-form-btn">
+						<span id="btnDangNhap">LOGIN </span>
+						</button>
+						<span id="result"></span>
+					</div>
 				</div>
 			</div>
+			<div id = "container-signup-form">
+				<form action="" method="post">
+					<div class="wrap-input m-b-23">
+						<span class="label-input">Email</span>
+						<input id ="email" name="email" class="input" type="text"/>
+					</div>
+					<div class="wrap-input">
+						<span class="label-input">Password</span>
+						<input id ="matkhau" name="matkhau"class="input" type="password"/>
+					</div>
+					<div class="wrap-input">
+						<span class="label-input">Nhap Lai Password</span>
+						<input id ="nhaplaimatkhau" name="nhaplaimatkhau"class="input" type="password"/>
+					</div>
+					<div class="forgot-password-text text-right p-t-8 p-b-31">
+						<a>Forgot password?</a>
+					</div>
+				</form>
+				<div class="container-login-form-btn">
+					<div class="wrap-login-form-btn">
+						<button class="login-form-btn">
+						<span id="btnDangNhap">SIGNUP</span>
+						</button>
+						<span id="result"></span>
+					</div>
+				</div>
+			</div>
+		</div>
 			<div class="sign-up-text text-center p-t-54 p-b-20">
 				<span>Or sign up using</span>
 			</div>
