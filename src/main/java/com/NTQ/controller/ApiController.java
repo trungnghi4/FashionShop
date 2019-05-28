@@ -14,7 +14,7 @@ import com.NTQ.service.NhanVienService;
 
 @Controller
 @RequestMapping("api/")
-@SessionAttributes("email")
+@SessionAttributes("user")
 public class ApiController {
 	
 	@Autowired
@@ -22,11 +22,10 @@ public class ApiController {
 	
 	@GetMapping("KiemTraDangNhap")
 	@ResponseBody
-	public String KiemTraDangNhap(@RequestParam String email, @RequestParam String matkhau,ModelMap modelMap)
+	public String KiemTraDangNhap(@RequestParam String email, @RequestParam String matkhau, ModelMap modelMap)
 	{
 		boolean kiemtra = nhanVienService.KiemTraDangNhap(email, matkhau);
-		modelMap.addAttribute("email",email);
-		
+		modelMap.addAttribute("user",email);
 		return ""+kiemtra;
 	}
 }

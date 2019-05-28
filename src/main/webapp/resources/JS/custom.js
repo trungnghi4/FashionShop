@@ -12,7 +12,7 @@ $(document).ready(function(){
 			success:function(value){
 				if(value == "true"){
 					duongDanHienTai = window.location.href;
-					duongDan = duongDanHienTai.replace("dangnhap/","");
+					duongDan = duongDanHienTai.replace("dangnhap","");
 					window.location = duongDan;
 				}else{
 					$("#result").text("Đăng nhập thất bại!")
@@ -20,6 +20,7 @@ $(document).ready(function(){
 			}
 		})
 	});
+
 	$("#dangnhap").click(function(){
 		$(this).addClass("actived");
 		$("#dangky").removeClass("actived");
@@ -33,4 +34,3 @@ $(document).ready(function(){
 		$("#container-signup-form").show();
 	});
 }) 
-

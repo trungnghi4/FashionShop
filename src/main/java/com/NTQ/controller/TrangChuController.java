@@ -11,16 +11,17 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 
 @Controller
 @RequestMapping("/")
-
 public class TrangChuController {
+	
 	@GetMapping
 	@Transactional
-	public String Default(ModelMap modelMap, HttpSession httpSession){
-		if(httpSession.getAttribute("user") !=null) {
+	public String Default(@SessionAttribute("user") String user, ModelMap modelMap, HttpSession httpSession) {
+		if(httpSession.getAttribute("user")!=null)
+		{
 			String email = (String) httpSession.getAttribute("user");
 			String chucaidau = email.substring(0,1);
-			modelMap.addAttribute("chucaidau",chucaidau);
+			modelMap.addAttribute("chucaidau", chucaidau);
 		}
-		return "trangchu";
+		return "home";
 	}
 }

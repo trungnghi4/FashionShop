@@ -24,8 +24,5 @@
     
     <import resource="classpath:IoC.xml"/>	 
     
-    
-<!--     <mvc:resources mapping="/resources/**" location="/resources/" />-->
-<!--    <mvc:resources mapping="/resources/**" location="/resources/"/>-->
  
 </beans>

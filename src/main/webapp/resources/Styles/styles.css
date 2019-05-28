@@ -203,8 +203,12 @@ html,body{
 	height: 50px;
 	cursor: pointer;
 }
-.container-signup-form{
+#container-signup-form{
 	display:none;
+}
+.actived {
+	color:#0167ff !important;
+	background: none !important;
 }
 /* End css login*/
 
@@ -327,6 +331,24 @@ html,body{
  }
 @media (min-width: 992px) and (max-width:1199px){ }
 @media (min-width: 1200px){ }
+.circle-avatar{
+	width: 32px;
+	height: 32px;
+	border-radius: 16px;
+	background-color: red;
+	text-align: center;
+	padding: 5px!important;
+	margin-top: 10px;
+	margin-bottom: 15px;
 }
-
+a.circle-avatar:hover{
+	width: 32px !important;
+	height: 32px !important;
+	border-radius: 16px !important;
+	background-color: red !important;
+	text-align: center !important;
+	padding: 5px !important;
+	margin-top: 10px !important;
+	margin-bottom: 15px !important;
+}
 /* End css home*/

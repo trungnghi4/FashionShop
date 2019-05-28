@@ -35,4 +35,15 @@ public class NhanVienDAO implements NhanVienImp{
 		}
 
 	}
+
+	@Transactional
+	public boolean ThemNhanVien(NhanVien nhanVien) {
+		Session session = sessionFactory.getCurrentSession();
+		int manhanvien = (Integer) session.save(nhanVien);
+		if(manhanvien>0) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 }

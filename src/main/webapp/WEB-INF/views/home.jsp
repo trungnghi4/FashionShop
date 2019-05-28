@@ -47,11 +47,17 @@
 							
 						</ul>
 					
-						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#">ĐĂNG NHẬP</a></li>
-							<li><a href="#">ĐĂNG KÝ	</a></li>
-							<li><a href ="#"><img src ='<c:url value="/resources/images/logo.png"/>'%> /></a></li> 
-							
+						<ul class="nav navbar_nav navbar_right">
+						  	<c:choose>
+						  		<c:when test="${chucaidau !=null }">
+						  			<li><a class="circle-avatar" href="dangnhap"><span>${chucaidau}</span></a></li>
+						  		</c:when>
+						  		<c:otherwise>
+						  			<li><a href="dangnhap">ĐĂNG NHẬP</a></li>
+						  		</c:otherwise>
+						  	</c:choose>
+						  	
+						  	<li><a href="#"><img src='<c:url value="/resources/images/home.png"/>'></a></li>
 						</ul>
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
@@ -71,7 +77,6 @@
 					<img class="icon" src ='<c:url value="/resources/images/logo.png"/>'%> />'/> <br/>
 					<span style="font-size: 32px; font-weight: 500">CHẤT LƯỢNG</span><br/>
 					<span>Chúng tôi cam kết mang đến chất lượng tốt nhất!</span>
-
 			</div>
 			<div class="class ="col-12 col-sm-4 col-md-4 ">
 					<img  class="icon" src ='<c:url value="/resources/images/logo.png"/>'%> />'/><br/>
@@ -83,9 +88,7 @@
 					<img  class="icon" src ='<c:url value="/resources/images/logo.png"/>'%> />'/><br/>
 					<span style="font-size: 32px; font-weight: 500">GIAO HÀNG</span><br/>
 					<span>Chúng tôi cam kết mang đến chất lượng tốt nhất!</span>
-
 			</div>
-
 		</div>
 		
 	</div>
@@ -98,7 +101,6 @@
 						<span>Áo sơ mi</span><br/>
 						<span class="gia">150.000 VNĐ</span>
 					</div>
-
 				</div>
 				<div class="col-md-3 col-sm-6">
 						<div class="sanpham">
@@ -143,7 +145,6 @@
 						<button class ="material-primary-button">Đồng ý</button>
 						<span></span>
 				</div>
-
 		</div>
 	
 	</div>
@@ -153,8 +154,3 @@
 	<jsp:include page="footer.jsp"/>
 </body>
 </html>
-
-
-
-
-	
