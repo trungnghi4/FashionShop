@@ -27,6 +27,7 @@ public class SanPham {
 	String giatien; 
 	String mota;
 	String hinhsanpham; 
+	String gianhcho;
 	
 	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name="masanpham")
@@ -35,9 +36,14 @@ public class SanPham {
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name="CHITIETKHUYENMAI", joinColumns= {@JoinColumn(name="masanpham",referencedColumnName="masanpham")},
 	inverseJoinColumns={@JoinColumn(name="makhuyenmai",referencedColumnName="makhuyenmai")} )
-	
-	
 	Set<KhuyenMai> danhsachkhuyenmai;
+	
+	public String getGianhcho() {
+		return gianhcho;
+	}
+	public void setGianhcho(String gianhcho) {
+		this.gianhcho = gianhcho;
+	}
 	public int getMasanpham() {
 		return masanpham;
 	}

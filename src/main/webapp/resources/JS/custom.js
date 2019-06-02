@@ -33,4 +33,25 @@ $(document).ready(function(){
 		$("#container-login-form").hide();
 		$("#container-signup-form").show();
 	});
+	
+	
+	$("body").on("click",".paging-item",function(){
+		$(".paging-item").removeClass("active");
+		$(this).addClass("active");
+		var sotrang = $(this).text();
+		var spbatdau = (sotrang - 1)*5;
+		$.ajax({
+			url:"/FashopShop/api/LaySanPhamLimit",
+			type:"GET",
+			data:{
+				spbatdau:spbatdau
+			},
+			success:function(value){
+				var tbodysanpham = $("#table-sanpham").find("tbody");
+				tbodysanpham.empty();
+				tbodysanpham.append(value);
+			}
+		})
+		
+	});
 }) 
