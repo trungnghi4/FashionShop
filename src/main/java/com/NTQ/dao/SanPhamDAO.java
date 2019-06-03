@@ -22,6 +22,7 @@ public class SanPhamDAO implements SanPhamImp{
 	@Autowired
 	SessionFactory sessionFactory;
 
+	@Override
 	@Transactional
 	public List<SanPham> LayDanhSachSanPhamLimit(int spbatdau) {
 		Session session = sessionFactory.getCurrentSession();
@@ -34,6 +35,15 @@ public class SanPhamDAO implements SanPhamImp{
 			listSanPhams = (List<SanPham>) session.createQuery("from SANPHAM").setFirstResult(spbatdau).setMaxResults(5).getResultList();
 		}
 		return listSanPhams;
+	}
+
+	@Override
+	@Transactional
+	public boolean XoaSanPhamTheoMaSanPham(int masanpham) {
+		Session session = sessionFactory.getCurrentSession();
+		SanPham sanPham = session.get(SanPham.class, masanpham);
+		session.delete(sanPham);
+		return true;
 	}
 	
 	

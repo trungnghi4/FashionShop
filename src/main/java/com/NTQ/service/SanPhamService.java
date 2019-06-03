@@ -14,9 +14,15 @@ public class SanPhamService implements SanPhamImp {
 	@Autowired
 	SanPhamDAO sanPhamDAO;
 
+	@Override
 	public List<SanPham> LayDanhSachSanPhamLimit(int spbatdau) {
 		List<SanPham> listSanPhams = sanPhamDAO.LayDanhSachSanPhamLimit(spbatdau);
 		return listSanPhams;
+	}
+
+	@Override
+	public boolean XoaSanPhamTheoMaSanPham(int masanpham) {
+		return sanPhamDAO.XoaSanPhamTheoMaSanPham(masanpham);
 	}
 
 }

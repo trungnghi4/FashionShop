@@ -51,7 +51,36 @@ $(document).ready(function(){
 				tbodysanpham.empty();
 				tbodysanpham.append(value);
 			}
-		})
-		
+		})	
 	});
+	
+	$("#check-all").change(function() {
+		if(this.checked) {
+			$("#table-sanpham input").each(function() {
+				$(this).attr("checked", true);
+			})
+		} else {
+			$("#table-sanpham input").each(function() {
+				$(this).attr("checked", false);
+			})
+		}
+	})
+	
+	$("#xoa-sanpham").click(function() {
+		$("#table-sanpham >tbody input:checked").each(function() {
+			var masanpham=$(this).val();
+			var This=$(this);
+			
+			$.ajax({
+				url:"/FashopShop/api/XoaSanPham",
+				type:"GET",
+				data:{
+					masanpham:masanpham
+				},
+				success:function(value){
+					This.closest("tr").remove();
+				}
+			})	
+		})
+	})
 }) 

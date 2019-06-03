@@ -37,12 +37,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    <!--/content-inner-->
 <div class="left-content">
 	<h3>Quản lý sản phẩm</h3>
+	<div style="float:right">
+		<button class="btn btn-success">Thêm sản phẩm</button>
+		<button id="xoa-sanpham" class="btn btn-danger">Xóa</button>
+	</div>
 	<table id="table-sanpham" class="table">
 		<thead>
 			<tr>
 				<th scope="col">
 					<div class="checkbox">
-						<label><input type="checkbox" value=""></label>
+						<label><input id="check-all" type="checkbox" value=""></label>
 					</div>
 				</th>	
 				<th scope="col">Tên sản phẩm</th>
@@ -52,10 +56,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</thead>
 		<tbody>
 			<c:forEach var="value" items="${listSanPham }">
-				<tr>
+				<tr style="border-bottom: 1px solid #eeeeee;">
 					<td>
 						<div class="checkbox">
-							<label><input class="checkboxsanpham" type="checkbox" value=""></label>
+							<label><input class="checkboxsanpham" type="checkbox" value="${value.getMasanpham() }"></label>
 						</div>
 					</td>	
 					<td class="tensp">${value.getTensanpham() }</td>

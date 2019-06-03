@@ -36,7 +36,7 @@ public class ApiController {
 		return ""+kiemtra;
 	}
 	
-	@GetMapping(path="LaySanPhamLimit", produces="plain/text;charset:utf-8")
+	@GetMapping(path="LaySanPhamLimit", produces="text/plain; charset=utf-8")
 	@ResponseBody
 	public String LaySanPhamLimit(@RequestParam int spbatdau)
 	{
@@ -44,13 +44,22 @@ public class ApiController {
 		List<SanPham> listSanPhams = sanPhamService.LayDanhSachSanPhamLimit(spbatdau);
 		for (SanPham sanPham : listSanPhams) {
 			html+="<tr>";
-			html+="<td><div class='checkbox'><label><input class='checkboxsanpham' type='checkbox' value=''></label></div></td>";
+			html+="<td><div class='checkbox'><label><input class='checkboxsanpham' type='checkbox' value='" + sanPham.getMasanpham() + "'></label></div></td>";
 			html+= "<td class='tensp'>" + sanPham.getTensanpham() + "</td>";
 			html+= "<td class='giatien'>" + sanPham.getGiatien() + "</td>";
 			html+= "<td class='gioitinh'>" + sanPham.getGianhcho() + "</td>";
 			html+="</tr>";
 		}
 		return html;
+		
+	}
+	
+	@GetMapping(path="XoaSanPham")
+	@ResponseBody
+	public String XoaSanPhamTheoMaSanPham(@RequestParam int masanpham)
+	{
+		sanPhamService.XoaSanPhamTheoMaSanPham(masanpham);
+		return "true";
 		
 	}
 }
