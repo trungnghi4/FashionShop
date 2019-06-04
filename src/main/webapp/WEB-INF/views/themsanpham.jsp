@@ -45,7 +45,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<label for="giatien">Giá tiền </label></br>
 			<input type="text" id="giatien" class="form-control" placeholder="Nhập vào giá tiền"/></br>
 			
-			<label for="danhmucsanpham">Danh mục </label>
+			<span>Giới tính </span></br>
+			<label class="radio-inline">
+				<input type="radio" name="gianhcho" checked>Nam
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="gianhcho">Nữ
+			</label></br>
+			
+			</br><label for="danhmucsanpham">Danh mục </label>
 			<select class="form-control" id="danhmucsanpham">
 				<c:forEach var="valuedanhmuc" items="${danhmuc }">
 					<option value="${valuedanhmuc.getMadanhmuc() }">${valuedanhmuc.getTendanhmuc() }</option>
@@ -58,17 +66,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<label for="hinhanh">Hình ảnh </label></br>
 			<input type="file" id="hinhanh" class="form-control" placeholder="Nhập vào giá tiền"/></br>
 			
-			<span>Giới tính </span></br>
-			<label class="radio-inline">
-				<input type="radio" name="optradio" checked>Nam
-			</label>
-			<label class="radio-inline">
-				<input type="radio" name="optradio">Nữ
-			</label>
+			<button class="btn btn-success">Thêm sản phẩm</button>
 		</div>
 		<div class="col-md-7 col-sm-12">
 			<div style="float:right">
-				<button class="btn btn-success">Thêm sản phẩm</button>
 				<button id="xoa-sanpham" class="btn btn-danger">Xóa</button>
 			</div>
 			<table id="table-sanpham" class="table">
