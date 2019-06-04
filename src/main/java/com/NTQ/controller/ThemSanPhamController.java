@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.NTQ.entity.DanhMucSanPham;
 import com.NTQ.entity.SanPham;
+import com.NTQ.service.DanhMucService;
 import com.NTQ.service.SanPhamService;
 
 @Controller
@@ -23,6 +25,9 @@ import com.NTQ.service.SanPhamService;
 public class ThemSanPhamController {
 	@Autowired
 	SanPhamService sanPhamService;
+	
+	@Autowired
+	DanhMucService danhMucService;
 	
 	@GetMapping
 	public String Default(ModelMap modelMap) {
@@ -32,6 +37,9 @@ public class ThemSanPhamController {
 		modelMap.addAttribute("listSanPham", listSanPhams);
 		modelMap.addAttribute("allSanPham", allSanPhams);
 		modelMap.addAttribute("tongpage", tongpage);
+		
+		List<DanhMucSanPham> danhMucSanPhams = danhMucService.LayDanhMuc();
+		modelMap.addAttribute("danhmuc", danhMucSanPhams);
 		return "themsanpham"; 
 	}
 }

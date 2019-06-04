@@ -37,50 +37,82 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    <!--/content-inner-->
 <div class="left-content">
 	<h3>Quản lý sản phẩm</h3>
-	<div style="float:right">
-		<button class="btn btn-success">Thêm sản phẩm</button>
-		<button id="xoa-sanpham" class="btn btn-danger">Xóa</button>
+	<div class="row">
+		<div class="col-md-5 col-sm-12 form-group">
+			<label for="tensanpham">Tên sản phẩm </label></br>
+			<input type="text" id="tensanpham" class="form-control" placeholder="Nhập vào tên sản phẩm"/></br>
+			
+			<label for="giatien">Giá tiền </label></br>
+			<input type="text" id="giatien" class="form-control" placeholder="Nhập vào giá tiền"/></br>
+			
+			<label for="danhmucsanpham">Danh mục </label>
+			<select class="form-control" id="danhmucsanpham">
+				<c:forEach var="valuedanhmuc" items="${danhmuc }">
+					<option value="${valuedanhmuc.getMadanhmuc() }">${valuedanhmuc.getTendanhmuc() }</option>
+				</c:forEach>
+			</select></br>
+			
+			<label for="mota">Mô tả </label></br>
+			<textarea rows="5" type="text" id="mota" class="form-control" placeholder="Nhập vào mô tả"></textarea></br>
+			
+			<label for="hinhanh">Hình ảnh </label></br>
+			<input type="file" id="hinhanh" class="form-control" placeholder="Nhập vào giá tiền"/></br>
+			
+			<span>Giới tính </span></br>
+			<label class="radio-inline">
+				<input type="radio" name="optradio" checked>Nam
+			</label>
+			<label class="radio-inline">
+				<input type="radio" name="optradio">Nữ
+			</label>
+		</div>
+		<div class="col-md-7 col-sm-12">
+			<div style="float:right">
+				<button class="btn btn-success">Thêm sản phẩm</button>
+				<button id="xoa-sanpham" class="btn btn-danger">Xóa</button>
+			</div>
+			<table id="table-sanpham" class="table">
+				<thead>
+					<tr>
+						<th scope="col">
+							<div class="checkbox">
+								<label><input id="check-all" type="checkbox" value=""></label>
+							</div>
+						</th>	
+						<th scope="col">Tên sản phẩm</th>
+						<th scope="col">Giá tiền</th>
+						<th scope="col">Giới tính</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach var="value" items="${listSanPham }">
+						<tr style="border-bottom: 1px solid #eeeeee;">
+							<td>
+								<div class="checkbox">
+									<label><input class="checkboxsanpham" type="checkbox" value="${value.getMasanpham() }"></label>
+								</div>
+							</td>	
+							<td class="tensp">${value.getTensanpham() }</td>
+							<td class="giatien">${value.getGiatien() }</td>
+							<td class="gioitinh">${value.getGianhcho() }</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+			<ul class="pagination">
+				<c:forEach var="i" begin="1" end="${tongpage }">
+					<c:choose>
+						<c:when test = "${i==1 }">
+							<li class="active paging-item"><a href="#">${i }</a></li>
+						</c:when>
+						<c:otherwise>
+							<li class="paging-item"><a href="#">${i }</a></li>
+						</c:otherwise>
+					</c:choose>
+				</c:forEach>
+			</ul>
+		</div>
 	</div>
-	<table id="table-sanpham" class="table">
-		<thead>
-			<tr>
-				<th scope="col">
-					<div class="checkbox">
-						<label><input id="check-all" type="checkbox" value=""></label>
-					</div>
-				</th>	
-				<th scope="col">Tên sản phẩm</th>
-				<th scope="col">Giá tiền</th>
-				<th scope="col">Giới tính</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach var="value" items="${listSanPham }">
-				<tr style="border-bottom: 1px solid #eeeeee;">
-					<td>
-						<div class="checkbox">
-							<label><input class="checkboxsanpham" type="checkbox" value="${value.getMasanpham() }"></label>
-						</div>
-					</td>	
-					<td class="tensp">${value.getTensanpham() }</td>
-					<td class="giatien">${value.getGiatien() }</td>
-					<td class="gioitinh">${value.getGianhcho() }</td>
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
-	<ul class="pagination">
-		<c:forEach var="i" begin="1" end="${tongpage }">
-			<c:choose>
-				<c:when test = "${i==1 }">
-					<li class="active paging-item"><a href="#">${i }</a></li>
-				</c:when>
-				<c:otherwise>
-					<li class="paging-item"><a href="#">${i }</a></li>
-				</c:otherwise>
-			</c:choose>
-		</c:forEach>
-	</ul>
 </div>
   <!--//content-inner-->
 			<!--/sidebar-menu-->

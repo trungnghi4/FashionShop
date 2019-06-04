@@ -43,7 +43,7 @@ public class ApiController {
 		String html="";
 		List<SanPham> listSanPhams = sanPhamService.LayDanhSachSanPhamLimit(spbatdau);
 		for (SanPham sanPham : listSanPhams) {
-			html+="<tr>";
+			html+="<tr style=\"border-bottom: 1px solid #eeeeee;\">";
 			html+="<td><div class='checkbox'><label><input class='checkboxsanpham' type='checkbox' value='" + sanPham.getMasanpham() + "'></label></div></td>";
 			html+= "<td class='tensp'>" + sanPham.getTensanpham() + "</td>";
 			html+= "<td class='giatien'>" + sanPham.getGiatien() + "</td>";
