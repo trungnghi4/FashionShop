@@ -14,7 +14,6 @@
 	<div id="header" class="container-fluid">
 		<nav class="navbar navbar-default none_nav">
 		 <div class="container-fluid">
-			<nav class="navbar navbar-expand-sm none-nav">
 				<!-- Brand -->
 				<div class="navbar-header">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -23,13 +22,13 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="#"><img src ='<c:url value="/resources/images/logo.png"/>'%> /></a>
+						<a class="navbar-brand" href="#"><img src ='<c:url value="/resources/images/logo.png"/>'></a>
 					</div>
 			
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-center">
-							<li><a href="#">TRANG CHỦ</a></li>
+							<li class="active"><a href="#">TRANG CHỦ</a></li>
 							<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
 									<ul class="dropdown-menu">
@@ -59,8 +58,8 @@
 						  	
 						  	<li><a href="#"><img src='<c:url value="/resources/images/home.png"/>'></a></li>
 						</ul>
-					</div><!-- /.navbar-collapse -->
-				</div><!-- /.container-fluid -->
+					</div>
+				</div>
 			</nav>
 			<div class="event_header container">
 				<span>Ngày 15/5/2019 - 30/5/2019</span><br/>
@@ -68,24 +67,22 @@
 				<button>XEM NGAY</button>
 
 			</div>
-		
-		</div>
 	</div>	
-	<div id="info" class="container-fluid">
+	<div id="info" class="container">
 		<div class="row">
-			<div class="class ="col-12 col-sm-4 col-md-4 ">
-					<img class="icon" src ='<c:url value="/resources/images/logo.png"/>'%> />'/> <br/>
+			<div class="col-12 col-sm-4 col-md-4 ">
+					<img class="icon" src ='<c:url value="/resources/images/icon-chatluong.png"/>'> <br/>
 					<span style="font-size: 32px; font-weight: 500">CHẤT LƯỢNG</span><br/>
 					<span>Chúng tôi cam kết mang đến chất lượng tốt nhất!</span>
 			</div>
-			<div class="class ="col-12 col-sm-4 col-md-4 ">
-					<img  class="icon" src ='<c:url value="/resources/images/logo.png"/>'%> />'/><br/>
+			<div class="col-12 col-sm-4 col-md-4 ">
+					<img  class="icon" src ='<c:url value="/resources/images/icon-conheo.jpg"/>'><br/>
 					<span style="font-size: 32px; font-weight: 500">TIẾT KIỆM CHI PHÍ</span><br/>
 					<span>Chúng tôi cam kết mang đến chất lượng tốt nhất!</span>
 
 			</div>
-			<div class="class ="col-12 col-sm-4 col-md-4 ">
-					<img  class="icon" src ='<c:url value="/resources/images/logo.png"/>'%> />'/><br/>
+			<div class="col-12 col-sm-4 col-md-4 ">
+					<img  class="icon" src ='<c:url value="/resources/images/icon-giaohang.png"/>'><br/>
 					<span style="font-size: 32px; font-weight: 500">GIAO HÀNG</span><br/>
 					<span>Chúng tôi cam kết mang đến chất lượng tốt nhất!</span>
 			</div>
@@ -97,14 +94,14 @@
 			<div class="row" style="margin-top: 42px">
 				<div class="col-md-3 col-sm-6 ">
 					<div class="sanpham">
-						<img  alt="hinh" src ='<c:url value="/resources/images/logo.png" />'/>
+						<img  alt="hinh" src ='<c:url value="/resources/images/temp.jpg" />'/><br/>
 						<span>Áo sơ mi</span><br/>
 						<span class="gia">150.000 VNĐ</span>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6">
 						<div class="sanpham">
-							<img  alt="hinh" src ='<c:url value="/resources/images/logo.png" />'/>
+							<img  alt="hinh" src ='<c:url value="/resources/images/temp.jpg" />'/><br/>
 							<span class="gia">Áo sơ mi</span><br/>
 							<span>150.000 VNĐ</span>
 						</div>
@@ -112,7 +109,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6">
 							<div class="sanpham">
-								<img  alt="hinh" src ='<c:url value="/resources/images/logo.png" />'/>
+								<img  alt="hinh" src ='<c:url value="/resources/images/temp.jpg" />'/><br/>
 								<span class="gia">Áo sơ mi</span><br/>
 								<span>150.000 VNĐ</span>
 							</div>
@@ -120,7 +117,7 @@
 				</div>
 				<div class="col-md-3 col-sm-6">
 								<div class="sanpham">
-									<img  alt="hinh" src ='<c:url value="/resources/images/logo.png" />'/>
+									<img  alt="hinh" src ='<c:url value="/resources/images/temp.jpg" />'/><br/>
 									<span class="gia">Áo sơ mi</span><br/>
 									<span>150.000 VNĐ</span>
 								</div>
