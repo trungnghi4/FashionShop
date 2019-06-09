@@ -4,6 +4,7 @@ import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -29,10 +30,16 @@ public class SanPham {
 	String hinhsanpham; 
 	String gianhcho;
 	
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name="masanpham")
 	Set<ChiTietSanPham> chitietsanpham;
 	
+	public Set<ChiTietSanPham> getChitietsanpham() {
+		return chitietsanpham;
+	}
+	public void setChitietsanpham(Set<ChiTietSanPham> chitietsanpham) {
+		this.chitietsanpham = chitietsanpham;
+	}
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name="CHITIETKHUYENMAI", joinColumns= {@JoinColumn(name="masanpham",referencedColumnName="masanpham")},
 	inverseJoinColumns={@JoinColumn(name="makhuyenmai",referencedColumnName="makhuyenmai")} )

@@ -17,7 +17,7 @@
     	<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 	    <property name="url" value="jdbc:mysql://localhost:3306/dbShopK" />
 	    <property name="username" value="root" />
-	    <property name="password" value="Nghia1228" />
+	    <property name="password" value="thinhphan123" />
     </bean>
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
     	<property name="dataSource" ref="dataSource"/>
@@ -32,6 +32,8 @@
     <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
     	<property name="sessionFactory" ref="sessionFactory"/>
     </bean>
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	</bean>
     <tx:annotation-driven transaction-manager="transactionManager"/>
   	<tx:annotation-driven  proxy-target-class="true"/>
  

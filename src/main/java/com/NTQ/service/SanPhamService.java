@@ -25,4 +25,20 @@ public class SanPhamService implements SanPhamImp {
 		return sanPhamDAO.XoaSanPhamTheoMaSanPham(masanpham);
 	}
 
+	@Override
+	public boolean ThemSanPham(SanPham sanPham) {
+		return sanPhamDAO.ThemSanPham(sanPham);
+	}
+
+	@Override
+	public SanPham LayDanhSachChiTietSanPhamTheoMa(int masanpham) {
+		SanPham sanPham = sanPhamDAO.LayDanhSachChiTietSanPhamTheoMa(masanpham);
+		return sanPham;
+	}
+
+	@Override
+	public boolean CapNhatSanPham(SanPham sanPham) {
+		return sanPhamDAO.CapNhatSanPham(sanPham);
+	}
+
 }
