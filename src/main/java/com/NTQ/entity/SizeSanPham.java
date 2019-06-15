@@ -11,7 +11,14 @@ public class SizeSanPham {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	int masize;
 	String tensize;
+	String size;
 	
+	public String getSize() {
+		return size;
+	}
+	public void setSize(String size) {
+		this.size = size;
+	}
 	public int getMasize() {
 		return masize;
 	}

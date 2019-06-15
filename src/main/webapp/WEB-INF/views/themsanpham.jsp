@@ -37,46 +37,127 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
    <!--/content-inner-->
 <div class="left-content">
 	<h3>Quản lý sản phẩm</h3>
-	<table id="table-sanpham" class="table">
-		<thead>
-			<tr>
-				<th scope="col">
-					<div class="checkbox">
-						<label><input type="checkbox" value=""></label>
-					</div>
-				</th>	
-				<th scope="col">Tên sản phẩm</th>
-				<th scope="col">Giá tiền</th>
-				<th scope="col">Giới tính</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach var="value" items="${listSanPham }">
-				<tr>
-					<td>
-						<div class="checkbox">
-							<label><input class="checkboxsanpham" type="checkbox" value=""></label>
-						</div>
-					</td>	
-					<td class="tensp">${value.getTensanpham() }</td>
-					<td class="giatien">${value.getGiatien() }</td>
-					<td class="gioitinh">${value.getGianhcho() }</td>
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
-	<ul class="pagination">
-		<c:forEach var="i" begin="1" end="${tongpage }">
-			<c:choose>
-				<c:when test = "${i==1 }">
-					<li class="active paging-item"><a href="#">${i }</a></li>
-				</c:when>
-				<c:otherwise>
-					<li class="paging-item"><a href="#">${i }</a></li>
-				</c:otherwise>
-			</c:choose>
-		</c:forEach>
-	</ul>
+	<div class="row">
+		<form id="form-sanpham" action="">
+		<div class="col-md-5 col-sm-12 form-group">
+			<label for="tensanpham">Tên sản phẩm </label></br>
+			<input type="text" id="tensanpham" name="tensanpham" class="form-control" placeholder="Nhập vào tên sản phẩm"/></br>
+			
+			<label for="giatien">Giá tiền </label></br>
+			<input type="text" id="giatien" name="giatien" class="form-control" placeholder="Nhập vào giá tiền"/></br>
+			
+			<span>Giới tính </span></br>
+			<label class="radio-inline">
+				<input id="rd-nam" type="radio" name="gianhcho" checked value="Nam">Nam
+			</label>
+			<label class="radio-inline">
+				<input id="rd-nu" type="radio" name="gianhcho" value="Nữ">Nữ
+			</label></br>
+			
+			</br><label for="danhmucsanpham">Danh mục </label>
+			<select name="danhmucsanpham" class="form-control" id="danhmucsanpham">
+				<c:forEach var="valuedanhmuc" items="${danhmuc }">
+					<option value="${valuedanhmuc.getMadanhmuc() }">${valuedanhmuc.getTendanhmuc() }</option>
+				</c:forEach>
+			</select></br>
+			
+			<label for="mota">Mô tả </label></br>
+			<textarea rows="5" type="text" id="mota" name="mota" class="form-control" placeholder="Nhập vào mô tả"></textarea></br>
+			
+			<label for="hinhanh">Hình ảnh </label></br>
+			<input type="file" id="hinhanh" name="hinhanh" class="form-control" placeholder="Nhập vào giá tiền"/></br>
+			</form>
+			<div id="containterchitietsanpham">
+				<div class="chitietsanpham">
+					<span>Chi tiết </span></br>
+					<select name="mausanpham" class="form-control" id="mausanpham">
+						<c:forEach var="valuemau" items="${listmau }">
+							<option value="${valuemau.getMamau() }">${valuemau.getTenmau() }</option>
+						</c:forEach>
+					</select></br>
+					
+					<select name="sizesanpham" class="form-control" id="sizesanpham">
+						<c:forEach var="valuesize" items="${listsize }">
+							<option value="${valuesize.getMasize() }">${valuesize.getSize() }</option>
+						</c:forEach>
+					</select></br>
+					
+					<input type="number" id="soluong" name="soluong" class="form-control" placeholder="Số lượng" min="1" value="1"/></br>
+					
+					<button class="btn btn-primary btn-chitiet">Add detail</button>
+				</div>
+			</div>
+			
+			<div id="chitietsanpham" class="chitietsanpham">
+				<span>Chi tiết </span></br>
+				<select name="mausanpham" class="form-control" id="mausanpham">
+					<c:forEach var="valuemau" items="${listmau }">
+						<option value="${valuemau.getMamau() }">${valuemau.getTenmau() }</option>
+					</c:forEach>
+				</select></br>
+				
+				<select name="sizesanpham" class="form-control" id="sizesanpham">
+					<c:forEach var="valuesize" items="${listsize }">
+						<option value="${valuesize.getMasize() }">${valuesize.getSize() }</option>
+					</c:forEach>
+				</select></br>
+				
+				<input type="number" id="soluong" name="soluong" class="form-control" placeholder="Số lượng" min="1" value="1"/></br>
+				
+				<button id="btn-chitiet" class="btn btn-primary btn-chitiet">Add Detail</button>
+			</div>
+			
+			<button id="btn-themsanpham" class="btn btn-success">Create</button>
+			<button id="btn-capnhat" class="btn btn-success hidden">Update</button>
+			
+		</div>
+		<div class="col-md-7 col-sm-12">
+			<div style="float:right">
+				<button style="color: white; background-color: red" id="xoa-sanpham" class="btn">Delete</button>
+			</div>
+			<table id="table-sanpham" class="table">
+				<thead>
+					<tr>
+						<th scope="col">
+							<div class="checkbox">
+								<label><input id="check-all" type="checkbox" value=""></label>
+							</div>
+						</th>	
+						<th scope="col">Tên sản phẩm</th>
+						<th scope="col">Giá tiền</th>
+						<th scope="col">Giới tính</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:forEach var="value" items="${listSanPham }">
+						<tr style="border-bottom: 1px solid #eeeeee;">
+							<td>
+								<div class="checkbox">
+									<label><input class="checkboxsanpham" type="checkbox" value="${value.getMasanpham() }"></label>
+								</div>
+							</td>	
+							<td class="tensp">${value.getTensanpham() }</td>
+							<td class="giatien">${value.getGiatien() }</td>
+							<td class="gioitinh">${value.getGianhcho() }</td>
+							<td style="color: white" class="btn btn-warning capnhatsanpham" data-id="${value.getMasanpham() }">Update</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+			<ul class="pagination">
+				<c:forEach var="i" begin="1" end="${tongpage }">
+					<c:choose>
+						<c:when test = "${i==1 }">
+							<li class="active paging-item"><a href="#">${i }</a></li>
+						</c:when>
+						<c:otherwise>
+							<li class="paging-item"><a href="#">${i }</a></li>
+						</c:otherwise>
+					</c:choose>
+				</c:forEach>
+			</ul>
+		</div>
+	</div>
 </div>
   <!--//content-inner-->
 			<!--/sidebar-menu-->
