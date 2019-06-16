@@ -27,4 +27,5 @@ public class MauSanPhamDAO implements MauSanPhamImp {
 		String query = "from MAUSANPHAM";
 		List<MauSanPham> listMauSanPham = session.createQuery(query).getResultList();
 		return listMauSanPham;
+	}
 }
