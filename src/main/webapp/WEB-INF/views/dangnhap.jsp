@@ -18,8 +18,11 @@
 <body class="body-login">
 	<div class="container-login">
 		<img class="login-image" src='<c:url value="/resources/images/login_left.jpg"/>'/>
+		
 		<div class="login-form p-l-55 p-r-55 p-t-65 p-b-54">
-		<span class="actived" id ="dangnhap" class="login-form-title p-b-49">Login</span>/<span id="dangky" class="login-form-title p-b-49" >SignUp</span>
+		<span id ="dangnhap" class="login-form-title p-b-49" >Login</span>/
+		<span id="dangky" class="login-form-title p-b-49" >SignUp</span>
+		
 		<div>	
 			<div id="container-login-form">
 					<div class="wrap-input m-b-23">
@@ -57,36 +60,21 @@
 						<input id ="nhaplaimatkhau" name="nhaplaimatkhau"class="input" type="password"/>
 					</div>
 					<div class="forgot-password-text text-right p-t-8 p-b-31">
-						<a>Forgot password?</a>
 					</div>
-					<div class="wrap-login-form-btn">
-						<!-- <button class="login-form-btn"> -->
-						<!-- <span id="btnDangKy" type="submit" >SIGNUP</span> -->
-						<input type="submit" value="SIGNUP"/>
-						<!-- </button> -->
+					<div class="container-login-form-btn">
+						<div class="wrap-login-form-btn">
+							<button class="login-form-btn">
+							<span id="btnDangKy">SIGNUP</span>
+							</button>
+						</div>
 					</div>
+					<span>${kiemtradangnhap}</span>
+					
 				</form>
 				<span id="result"></span>
-				<!-- <div class="container-login-form-btn">
-					<div class="wrap-login-form-btn">
-						<button class="login-form-btn">
-						<span id="btnDangKy" type="submit" >SIGNUP</span>
-						<input id="btnDangKy" type="submit" value="SIGNUP"/>
-						</button>
-						<span id="result"></span>
-					</div>
-				</div> -->
 			</div>
 		</div>
-			<div class="sign-up-text text-center p-t-54 p-b-20">
-				<span>Or sign up using</span>
-			</div>
-			<div class="container-social-login text-center">
-				<img class="icon-facebook" alt="icon-facebook" src='<c:url value="/resources/images/facebook.png"/>'/>
-				<img class="icon-google" alt="icon-google" src='<c:url value="/resources/images/google.png"/>'/>
-			</div>
 		</div>
-			<span>${kiemtradangnhap}</span>
 	</div>
 </body>
 </html>

@@ -1,12 +1,12 @@
 $(document).ready(function(){
 	$("#btnDangNhap").click(function() {
-		var tendangnhap = $("#email").val();
+		var email = $("#email").val();
 		var password = $("#matkhau").val();
 		$.ajax({
 			url:"/FashopShop/api/KiemTraDangNhap",
 			type:"GET",
 			data:{
-				email:tendangnhap, 
+				email:email, 
 				matkhau:password
 			},
 			success:function(value){

@@ -39,7 +39,8 @@ public class DangNhapController {
 				nhanVien.setMatkhau(matkhau);
 				boolean ktThem = nhanVienService.ThemNhanVien(nhanVien);
 				if(ktThem) {
-					modelMap.addAttribute("kiemtradangnhap","Tạo tài khoản thành công");
+					//modelMap.addAttribute("kiemtradangnhap","Tạo tài khoản thành công");
+					return "dangnhap";
 				}else {
 					modelMap.addAttribute("kiemtradangnhap","Tạo tài khoản thất bại");
 				}
