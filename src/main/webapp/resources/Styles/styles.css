@@ -75,10 +75,9 @@ html,body{
 .login-form-title {
 	font-family: Poppins-Bold;
 	display: block;
-	font-size: 39px;
+	font-size: 25px;
 	color: #333333;
 	line-height: 1.2;
-	text-align: center;
 }
 
 .wrap-input {

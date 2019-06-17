@@ -23,7 +23,7 @@ public class NhanVienDAO implements NhanVienImp{
 	public boolean KiemTraDangNhap(String email,String matkhau) {
 		Session session = sessionFactory.getCurrentSession();
 		try {
-			NhanVien nhanVien= (NhanVien) session.createQuery("from NHANVIEN where tendangnhap='"+ email+"' AND matkhau='"+matkhau+"'").getSingleResult();
+			NhanVien nhanVien= (NhanVien) session.createQuery("from NHANVIEN where email='"+ email+"' AND matkhau='"+matkhau+"'").getSingleResult();
 			if(nhanVien !=null) {
 				return true;
 			}else {
