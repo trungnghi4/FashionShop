@@ -1,0 +1,354 @@
+@CHARSET "UTF-8";
+html,body{
+	width:100%;
+	height:100%;
+	font-family: Roboto;
+}
+
+/* start css login*/
+
+@font-face {
+	font-family: Poppins-Regular;
+	src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+}
+
+@font-face {
+	font-family: Poppins-Medium;
+	src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+}
+
+@font-face {
+	font-family: Poppins-Bold;
+	src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+}
+
+@font-face {
+	font-family: Poppins-SemiBold;
+	src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
+}
+
+.body-login{
+	background-image: url("../images/bg-01.jpg");
+	width: 100%;  
+	min-height: 100vh;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.container-login{
+	width: 950px;
+	height: 100%;
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+  	box-shadow: 3px 5px 5px #848380;
+  	display: flex;
+  	flex-wrap: nowrap;
+}
+
+.login-image {
+	width: 500px;
+	height: 100%;
+}
+
+@media screen and (max-width: 950px) {
+	.login-image {
+	   display: none !important;
+	}
+}
+
+.login-form {
+	width: 100%;
+	height: 100%;
+}
+
+.login-form-title {
+	font-family: Poppins-Bold;
+	display: block;
+	font-size: 39px;
+	color: #333333;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.wrap-input {
+	width: 100%;
+	position: relative;
+}
+
+.label-input {
+	font-family: Poppins-Regular;
+	font-size: 14px;
+	color: #333333;
+	line-height: 1.5;
+	padding-left: 7px;
+}
+
+.input {
+	font-family: Poppins-Medium;
+	font-size: 16px;
+	color: #333333;
+	line-height: 1.2;
+	display: block;
+	width: 100%;
+	height: 50px;
+	padding: 0 7px 0 20px;
+	border-radius: 25px;
+	border: 1px solid #DDDDDD;
+}
+
+.input:focus {
+	box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	outline: none;
+}
+
+.container-login-form-btn {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.wrap-login-form-btn {
+	width: 100%;
+	display: block;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	margin: 0 auto;
+	box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+	-moz-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+	-webkit-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+	-o-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+	-ms-box-shadow: 0 5px 30px 0px rgba(3, 216, 222, 0.2);
+	border-radius: 25px;
+}
+
+.login-form-btn {
+	font-family: Poppins-Medium;
+	font-size: 16px;
+	color: #fff;
+	background: #0066ff; 
+	line-height: 1.2;
+	text-transform: uppercase;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 20px;
+	width: 100%;
+	height: 50px;
+	border-style: none;
+	border-radius: 25px;
+	cursor: pointer;
+}
+
+.login-form-btn span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.login-form-btn span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.login-form-btn:hover span {
+	padding-right: 25px;
+}
+
+.login-form-btn:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.forgot-password-text {
+	cursor: pointer;
+}
+
+.sign-up-text {
+	font-size: 14px;
+	line-height: 1.5;
+	color: #666666;
+}
+
+.icon-facebook {
+	height: 53px;
+	cursor: pointer;
+}
+
+.icon-google {
+	height: 50px;
+	cursor: pointer;
+}
+#container-signup-form{
+	display:none;
+}
+.actived {
+	color:#0167ff !important;
+	background: none !important;
+}
+/* End css login*/
+
+/* Start css home*/
+#header{ 
+	
+	height: 600px;
+	background: linear-gradient(
+		rgba(0,0,0,0.42),
+		rgba(0,0,0,0.42)
+	),url("../images/login_left.jpg") no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	
+}
+.none_nav{
+	background: none !important;
+	border: none !important;
+}
+.navbar_center{
+	margin-left: 25% !important;
+}
+.navbar_nav a{
+	color: white !important;
+}
+.active > a{
+	color:#0167ff !important;
+	background: none !important;
+	font-weight: bold;
+}
+.open > a{
+	color:#0167ff !important;
+	background: none !important;
+	font-weight: bold;
+}
+.dropdown-menu{
+	background-color:#0167ff !important;
+}
+.event_header{
+	text-align: center;
+	margin-top: 216px;
+}
+.event_header > span{
+	color: white;
+}
+.event_header > button{
+	color:white;
+	background-color: #39ffe1;
+	border: #39ffe1;
+}
+.icon{
+	width: 48px;
+	height: 48px;
+}
+#info > span{
+	margin-top:16px;
+}
+#title-sanpham{
+	margin-top: 100px;
+	text-align: center;
+	font-size: 32px;
+	font-weight: 500
+}
+.sanpham{
+	padding-bottom: 16px;
+	margin-top: 46px;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.gia{
+	font-size: 14px;
+	color: red;
+	margin-bottom: 16px;
+	padding-bottom: 16px;
+}
+.sanpham img{
+	height: 256px;
+
+}
+#footer{
+	margin-top: 42px;
+	color: white;
+	padding: 38px;
+	background-color: black;
+	background: linear-gradient(
+		rgba(0,0,0,0.42),
+		rgba(0,0,0,0.42)
+	),url("../images/login_left.jpg") no-repeat center center fixed;
+}
+#footer p{
+	text-align: center;
+}
+#footer textarea{
+	
+	border: 0;
+	background-color: #D8D8D8;
+	width: 100%;
+
+}
+
+.title-footer{
+	font-size: 32px;
+}
+
+@media (max-width: 575px){ 
+	.navbar_center{
+	    margin-left: 0 !important; 
+ }
+@media (min-width: 576px) and (max-width:767px){ 
+	.navbar_center{
+	    margin-left: 0 !important; 
+ }
+@media (min-width: 768px) and (max-width:991px){ 
+	.navbar_center{
+	    margin-left: 8% !important; 
+ }
+@media (min-width: 992px) and (max-width:1199px){ }
+@media (min-width: 1200px){ }
+.circle-avatar{
+	width: 32px;
+	height: 32px;
+	border-radius: 16px;
+	background-color: red;
+	text-align: center;
+	padding: 5px!important;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+a.circle-avatar:hover{
+	width: 32px !important;
+	height: 32px !important;
+	border-radius: 16px !important;
+	background-color: red !important;
+	text-align: center !important;
+	padding: 5px !important;
+	margin-top: 10px !important;
+	margin-bottom: 15px !important;
+}
+/* End css home*/

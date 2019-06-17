@@ -15,7 +15,8 @@ public class TrangChuController {
 	
 	@GetMapping
 	@Transactional
-	public String Default(@SessionAttribute("user") String user, ModelMap modelMap, HttpSession httpSession) {
+        public String Default( ModelMap modelMap, HttpSession httpSession) {
+		System.out.println(httpSession.getAttribute("user"));
 		if(httpSession.getAttribute("user")!=null)
 		{
 			String email = (String) httpSession.getAttribute("user");
@@ -24,4 +25,6 @@ public class TrangChuController {
 		}
 		return "home";
 	}
+	
 }
+
