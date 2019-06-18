@@ -41,7 +41,7 @@
 			<c:forEach var="sanpham" items="${listSanPham}">
 				<div class="col-md-3 col-sm-6 ">
 					<div class="sanpham">
-						<img  alt="hinh" src ='<c:url value="/resources/images/${sanpham.getHinhsanpham()}"/>'/><br/>
+						<img  alt="hinh" src ='<c:url value="/resources/images/sanpham/${sanpham.getHinhsanpham()}"/>'/><br/>
 						<span>${sanpham.getTensanpham()}</span><br/>
 						<span class="gia">${sanpham.getGiatien()} VNĐ</span>
 					</div>
