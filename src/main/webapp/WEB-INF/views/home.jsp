@@ -37,37 +37,17 @@
 	<div id="title-sanpham" class="container">
 			<span>SẢN PHẨM HOT</span>
 			<div class="row" style="margin-top: 42px">
+			
+			<c:forEach var="sanpham" items="${listSanPham}">
 				<div class="col-md-3 col-sm-6 ">
 					<div class="sanpham">
-						<img  alt="hinh" src ='<c:url value="/resources/images/temp.jpg" />'/><br/>
-						<span>Áo sơ mi</span><br/>
-						<span class="gia">150.000 VNĐ</span>
+						<img  alt="hinh" src ='<c:url value="/resources/images/${sanpham.getHinhsanpham()}"/>'/><br/>
+						<span>${sanpham.getTensanpham()}</span><br/>
+						<span class="gia">${sanpham.getGiatien()} VNĐ</span>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-6">
-						<div class="sanpham">
-							<img  alt="hinh" src ='<c:url value="/resources/images/temp.jpg" />'/><br/>
-							<span class="gia">Áo sơ mi</span><br/>
-							<span>150.000 VNĐ</span>
-						</div>
-	
-				</div>
-				<div class="col-md-3 col-sm-6">
-							<div class="sanpham">
-								<img  alt="hinh" src ='<c:url value="/resources/images/temp.jpg" />'/><br/>
-								<span class="gia">Áo sơ mi</span><br/>
-								<span>150.000 VNĐ</span>
-							</div>
-		
-				</div>
-				<div class="col-md-3 col-sm-6">
-								<div class="sanpham">
-									<img  alt="hinh" src ='<c:url value="/resources/images/temp.jpg" />'/><br/>
-									<span class="gia">Áo sơ mi</span><br/>
-									<span>150.000 VNĐ</span>
-								</div>
 			
-				</div>
+			</c:forEach>
 			</div>
 	</div>
 	
