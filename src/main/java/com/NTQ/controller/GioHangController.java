@@ -28,11 +28,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.NTQ.entity.ChiTietHoaDon;
 import com.NTQ.entity.ChiTietHoaDonId;
 import com.NTQ.entity.DanhMucSanPham;
-import com.NTQ.entity.GioHang;
+//import com.NTQ.entity.GioHang;
 import com.NTQ.entity.HoaDon;
-import com.NTQ.service.ChiTietHoaDonService;
+//import com.NTQ.service.ChiTietHoaDonService;
 import com.NTQ.service.DanhMucService;
-import com.NTQ.service.HoaDonService;
+//import com.NTQ.service.HoaDonService;
 
 @Controller
 @RequestMapping("giohang/")
@@ -41,24 +41,24 @@ public class GioHangController {
 	@Autowired
 	DanhMucService danhMucService;
 	
-	@Autowired
-	HoaDonService hoaDonService;
+	//@Autowired
+	//HoaDonService hoaDonService;
 	
-	@Autowired
-	ChiTietHoaDonService chiTietHoaDonService;
+	//@Autowired
+	//ChiTietHoaDonService chiTietHoaDonService;
 	
 	@GetMapping
 	public String Default(ModelMap map, HttpSession httpSession) {
 		
-		List<DanhMucSanPham> danhMucSanPhams = danhMucService.LayDanhMuc();
-		
-		if(null != httpSession.getAttribute("giohang")) {
-			List<GioHang> gioHangs = (List<GioHang>) httpSession.getAttribute("giohang");
-			map.addAttribute("soluongsanphamgiohang", gioHangs.size());
-			map.addAttribute("giohangs",gioHangs );
-		}
-		
-		map.addAttribute("danhmuc", danhMucSanPhams);
+//		List<DanhMucSanPham> danhMucSanPhams = danhMucService.LayDanhMuc();
+//		
+//		if(null != httpSession.getAttribute("giohang")) {
+//			List<GioHang> gioHangs = (List<GioHang>) httpSession.getAttribute("giohang");
+//			map.addAttribute("soluongsanphamgiohang", gioHangs.size());
+//			map.addAttribute("giohangs",gioHangs );
+//		}
+//		
+//		map.addAttribute("danhmuc", danhMucSanPhams);
 		
 		return "giohang";
 		
@@ -67,36 +67,36 @@ public class GioHangController {
 	@PostMapping() //produces="text/plain;charset=utf-8"
 	public String ThemHoaDon(HttpSession httpSession, @RequestParam String tenkhachhang,@RequestParam String sodt,@RequestParam String diachigiaohang,@RequestParam String hinhthucgiaohang,@RequestParam String ghichu) {
 		
-		if(null != httpSession.getAttribute("giohang")){
-			List<GioHang> gioHangs = (List<GioHang>) httpSession.getAttribute("giohang");
-			
-			HoaDon hoaDon = new HoaDon();
-			hoaDon.setTenkhachhang(tenkhachhang);
-			hoaDon.setSodt(sodt);
-			hoaDon.setDiachigiaohang(diachigiaohang);
-			hoaDon.setHinhthucgiaohang(hinhthucgiaohang);
-			hoaDon.setGhichu(ghichu);
-			
-			int idHoaDon = hoaDonService.ThemHoaDon(hoaDon);
-			if(idHoaDon > 0){
-				Set<ChiTietHoaDon> listChiTietHoaDons = new HashSet<ChiTietHoaDon>();
-				for (GioHang gioHang : gioHangs) {
-					ChiTietHoaDonId chiTietHoaDonId = new ChiTietHoaDonId();
-					chiTietHoaDonId.setMachitietsanpham(gioHang.getMachitiet());
-					chiTietHoaDonId.setMahoadon(hoaDon.getMahoadon());
-					
-					ChiTietHoaDon chiTietHoaDon = new ChiTietHoaDon();
-					chiTietHoaDon.setChitiethoadonid(chiTietHoaDonId);
-					chiTietHoaDon.setGiatien(gioHang.getGiatien().toString());
-					chiTietHoaDon.setSoluong(gioHang.getSoluong());
-					
-					chiTietHoaDonService.ThemChiTietHoaDon(chiTietHoaDon);
-				}
-			}else{
-				System.out.println("Them tb");
-			};	
-			
-		}
+//		if(null != httpSession.getAttribute("giohang")){
+//			List<GioHang> gioHangs = (List<GioHang>) httpSession.getAttribute("giohang");
+//			
+//			HoaDon hoaDon = new HoaDon();
+//			hoaDon.setTenkhachhang(tenkhachhang);
+//			hoaDon.setSodt(sodt);
+//			hoaDon.setDiachigiaohang(diachigiaohang);
+//			hoaDon.setHinhthucgiaohang(hinhthucgiaohang);
+//			hoaDon.setGhichu(ghichu);
+//			
+//			int idHoaDon = hoaDonService.ThemHoaDon(hoaDon);
+//			if(idHoaDon > 0){
+//				Set<ChiTietHoaDon> listChiTietHoaDons = new HashSet<ChiTietHoaDon>();
+//				for (GioHang gioHang : gioHangs) {
+//					ChiTietHoaDonId chiTietHoaDonId = new ChiTietHoaDonId();
+//					chiTietHoaDonId.setMachitietsanpham(gioHang.getMachitiet());
+//					chiTietHoaDonId.setMahoadon(hoaDon.getMahoadon());
+//					
+//					ChiTietHoaDon chiTietHoaDon = new ChiTietHoaDon();
+//					chiTietHoaDon.setChitiethoadonid(chiTietHoaDonId);
+//					chiTietHoaDon.setGiatien(gioHang.getGiatien().toString());
+//					chiTietHoaDon.setSoluong(gioHang.getSoluong());
+//					
+//					chiTietHoaDonService.ThemChiTietHoaDon(chiTietHoaDon);
+//				}
+//			}else{
+//				System.out.println("Them tb");
+//			};	
+//			
+//		}
 		
 		return "thongbaodathang";
 	}
