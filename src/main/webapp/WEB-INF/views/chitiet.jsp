@@ -16,41 +16,54 @@
 		<title>ShopK</title>
 	</head>
 	<body>
-		<jsp:include page="header.jsp"/>
+		<div style="padding: 10px 16px; background: #555; color: #f1f1f1;">
+  			<div class="navbar-header">
+				<a class="navbar-brand" href="/FashopShop"><img src ='<c:url value="/resources/images/logo.png"/>'></a>
+			</div>
+		</div>
 		
 		<%--Start content--%>
-		<div class="container">
+		<div class="container" style="padding-top: 70px">
 		    <div class="row">
-		        <div class="col-xs-12 col-sm-2 col-md-2">
-		            <h3>DANH MUC SAN PHAM</h3>
-		            <ul>
-		                <li>Ao so mi</li>
-		                <li>Ao Khoac</li>
-		                <li>Quan Dai</li>
-		            </ul>
-		        </div>
-		        <div class="col-xs-12 col-sm-8 col-md-8">
+		        <div class="col-xs-12 col-sm-12 col-md-12">
 		            <div class="row">
-		                <div class=" col-xs-12 col-sm-4 col-md-4">
-		                    <img src="<c:url value='/resoures/image/sanpham.png'/> "/>
+		                <div class=" col-xs-12 col-sm-12 col-md-3">
+		                    <img style="width: 250px;" alt="hinh" src ='<c:url value="/resources/images/sanpham/${sanpham.getHinhsanpham() }"/>'/>
 		                </div>
-		                <div class="col-xs-12 col-sm-8 col-md-8">
-		                    <h3>Aó sơ mi nam </h3>
-		                    <h5>Giá Tiền</h5>
-		                    <table>
-		                        <tr>
-		                            <td>222aaa</td>
-		                            <td>dđ</td>
-		                            <td>ffff</td>
-		                            <td>aaaa</td>
-		                        </tr>
+		                <div class="col-xs-12 col-sm-12 col-md-7" >
+			                <div style="padding-left: 15px;">
+			                 	<h3 class="font-weight-bold">${sanpham.getTensanpham() }</h3>
+			                    <h5 class="font-weight-bold">${sanpham.getDanhmucsanpham().getTendanhmuc() }</h5>
+			                    <h5 class="font-weight-bold">${sanpham.getGiatien() }</h5>
+			                </div>
+		                    </br>
+		                    <table class="table">
+		                    	<thead>
+		                    		<tr class="font-weight-bold" style="font-size: 18px;">
+		                    			<td>Màu sản phẩm</td>
+		                    			<td>Size</td>
+		                    			<td>Số lượng</td>
+		                    			<td></td>
+		                    		</tr>	
+		                    	</thead>
+		                        <tbody>
+		                        	<c:forEach var="chitietsanpham" items="${sanpham.getChitietsanpham() }">
+		                        		<tr>
+		                        			<td>${chitietsanpham.getMausanpham().getTenmau() }</td>
+		                        			<td>${chitietsanpham.getSizesanpham().getSize() }</td>
+		                        			<td>${chitietsanpham.getSoluong() }</td>
+		                        			<td><button class="btn btn-success">Giỏ hàng</button></td>
+		                        		</tr>
+		                        	</c:forEach>
+		                        </tbody>
 		                    </table>
 		                </div>
+		              	<div class="col-xs-12 col-sm-12 col-md-2" style="text-align: justify;">
+		            		<span>${sanpham.getMota() }</span>
+		        		</div>
 		            </div>
 		        </div>
-		        <div class="col-xs-12 col-sm-2 col-md-2">
-		            <span>U23 Thái Lan kết thúc vòng bảng với vị trí thứ 3, vỏn vẹn 2 điểm và phải về nước sớm. Người hâm mộ và truyền thông nước này đang thực sự giận dữ về thành tích tệ hại của đội nhà.</span>
-		        </div>
+		      
 		    </div>
 		</div>
 		

@@ -125,7 +125,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</th>	
 						<th scope="col">Tên sản phẩm</th>
 						<th scope="col">Giá tiền</th>
-						<th scope="col">Giới tính</th>
+						<th scope="col">Giành cho</th>
+						<th></th>
 					</tr>
 				</thead>
 				<tbody>

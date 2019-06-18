@@ -13,7 +13,7 @@
 <body>
 	<jsp:include page="header.jsp"/>
 	
-	<div id="info" class="container" style="text-align: center; padding-top: 70px; padding-bottom: 70px">
+	<div id="info" class="container" style="text-align: center; padding-top: 70px;">
 		<div class="row">
 			<div class="col-12 col-sm-4 col-md-4 ">
 					<img class="icon" src ='<c:url value="/resources/images/icon-chatluong.png"/>'> <br/>
@@ -41,12 +41,13 @@
 			<c:forEach var="sanpham" items="${listSanPham}">
 				<div class="col-md-3 col-sm-6 ">
 					<div class="sanpham">
-						<img  alt="hinh" src ='<c:url value="/resources/images/sanpham/${sanpham.getHinhsanpham()}"/>'/><br/>
+						<a href="chitiet/${sanpham.getMasanpham() }">
+							<img  alt="hinh" src ='<c:url value="/resources/images/sanpham/${sanpham.getHinhsanpham()}"/>'/><br/>
+						</a>
 						<span>${sanpham.getTensanpham()}</span><br/>
 						<span class="gia">${sanpham.getGiatien()} VNĐ</span>
 					</div>
 				</div>
-			
 			</c:forEach>
 			</div>
 	</div>
