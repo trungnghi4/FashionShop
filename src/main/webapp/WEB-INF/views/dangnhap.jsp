@@ -20,8 +20,11 @@
 		<img class="login-image" src='<c:url value="/resources/images/login_left.jpg"/>'/>
 		
 		<div class="login-form p-l-55 p-r-55 p-t-65 p-b-54">
-		<span id ="dangnhap" class="login-form-title p-b-49" >Login</span>/
-		<span id="dangky" class="login-form-title p-b-49" >SignUp</span>
+		<div  class="login-form-title p-b-49 text-center" >
+			<span style="display: inline" id="dangnhap">Login</span>/
+			<span style="display: inline" id="dangky">SignUp</span>
+		</div>
+		
 		
 		<div>	
 			<div id="container-login-form">
@@ -56,7 +59,7 @@
 						<input id ="matkhau" name="matkhau"class="input" type="password"/>
 					</div>
 					<div class="wrap-input">
-						<span class="label-input">Nhap Lai Password</span>
+						<span class="label-input">Re-Enter Password</span>
 						<input id ="nhaplaimatkhau" name="nhaplaimatkhau"class="input" type="password"/>
 					</div>
 					<div class="forgot-password-text text-right p-t-8 p-b-31">
