@@ -35,7 +35,7 @@ public class TrangChuController {
 //		}
 //		return "home";
 //	}
-	public String Default( ModelMap modelMap, HttpSession httpSession) {
+    public String Default( ModelMap modelMap, HttpSession httpSession) {
 		System.out.println(httpSession.getAttribute("user"));
 		if(httpSession.getAttribute("user")!=null)
 		{
@@ -43,9 +43,6 @@ public class TrangChuController {
 			String chucaidau = email.substring(0,1);
 			modelMap.addAttribute("chucaidau", chucaidau);
 		}
-		
-		List<SanPham> listSanPhams = sanPhamService.LayDanhSachSanPhamLimit(0);
-		modelMap.addAttribute("listSanPham",listSanPhams);
 		return "home";
 	}
 	
