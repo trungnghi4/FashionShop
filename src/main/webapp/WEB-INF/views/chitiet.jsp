@@ -12,6 +12,8 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script src="<c:url value ="/resources/JS/jquery-3.3.1.min.js"/>"></script>
+		<script src="<c:url value ="/resources/JS/custom.js"/>"></script>
 		<link href="<c:url value="/resources/bootstrap-4.0.0-dist/css/bootstrap.min.css" />" rel="stylesheet">
 		<title>ShopK</title>
 	</head>
@@ -30,11 +32,11 @@
 		                <div class=" col-xs-12 col-sm-12 col-md-3">
 		                    <img style="width: 250px;" alt="hinh" src ='<c:url value="/resources/images/sanpham/${sanpham.getHinhsanpham() }"/>'/>
 		                </div>
-		                <div class="col-xs-12 col-sm-12 col-md-7" >
+		                <div class="col-xs-12 col-sm-12 col-md-9" >
 			                <div style="padding-left: 15px;">
-			                 	<h3 class="font-weight-bold">${sanpham.getTensanpham() }</h3>
-			                    <h5 class="font-weight-bold">${sanpham.getDanhmucsanpham().getTendanhmuc() }</h5>
-			                    <h5 class="font-weight-bold">${sanpham.getGiatien() }</h5>
+			                 	<h3 id="tensp" class="font-weight-bold" data-masp="${sanpham.getMasanpham() }">${sanpham.getTensanpham() }</h3>
+			                    <h5 class="font-weight-bold" style="color: #D3D3D3">${sanpham.getDanhmucsanpham().getTendanhmuc() }</h5>
+			                    <h5 id="giatien" data-value="${sanpham.getGiatien() }" class="font-weight-bold" style="color: red">${sanpham.getGiatien() }</h5>
 			                </div>
 		                    </br>
 		                    <table class="table">
@@ -49,21 +51,20 @@
 		                        <tbody>
 		                        	<c:forEach var="chitietsanpham" items="${sanpham.getChitietsanpham() }">
 		                        		<tr>
-		                        			<td>${chitietsanpham.getMausanpham().getTenmau() }</td>
-		                        			<td>${chitietsanpham.getSizesanpham().getSize() }</td>
-		                        			<td>${chitietsanpham.getSoluong() }</td>
-		                        			<td><button class="btn btn-success">Giỏ hàng</button></td>
+		                        			<td class="mau" data-mamau="${chitietsanpham.getMausanpham().getMamau() }">${chitietsanpham.getMausanpham().getTenmau() }</td>
+		                        			<td class="size" data-masize="${chitietsanpham.getSizesanpham().getMasize() }">${chitietsanpham.getSizesanpham().getSize() }</td>
+		                        			<td class="soluong">${chitietsanpham.getSoluong() }</td>
+		                        			<td><button class="btn btn-success btn-giohang">Thêm vào giỏ hàng</button></td>
 		                        		</tr>
 		                        	</c:forEach>
 		                        </tbody>
 		                    </table>
-		                </div>
-		              	<div class="col-xs-12 col-sm-12 col-md-2" style="text-align: justify;">
-		            		<span>${sanpham.getMota() }</span>
-		        		</div>
+		                </div>	         
 		            </div>
-		        </div>
-		      
+		            </br>
+		            <h5 class="font-weight-bold">Mô tả</h5>
+					<span>${sanpham.getMota() }</span>
+		        </div>   
 		    </div>
 		</div>
 		

@@ -46,7 +46,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<label for="giatien">Giá tiền </label></br>
 			<input type="text" id="giatien" name="giatien" class="form-control" placeholder="Nhập vào giá tiền"/></br>
 			
-			<span>Giới tính </span></br>
+			<span>Giành cho </span></br>
 			<label class="radio-inline">
 				<input id="rd-nam" type="radio" name="gianhcho" checked value="Nam">Nam
 			</label>

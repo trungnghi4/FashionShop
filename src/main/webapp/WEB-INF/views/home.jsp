@@ -44,8 +44,8 @@
 						<a href="chitiet/${sanpham.getMasanpham() }">
 							<img  alt="hinh" src ='<c:url value="/resources/images/sanpham/${sanpham.getHinhsanpham()}"/>'/><br/>
 						</a>
-						<span>${sanpham.getTensanpham()}</span><br/>
-						<span class="gia">${sanpham.getGiatien()} VNĐ</span>
+						<span style="font-size: 18px;">${sanpham.getTensanpham()}</span><br/>
+						<span style="font-size: 18px;" class="gia">${sanpham.getGiatien()} VNĐ</span>
 					</div>
 				</div>
 			</c:forEach>
